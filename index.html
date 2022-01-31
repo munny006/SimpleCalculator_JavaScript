@@ -3,53 +3,59 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible"content="ie=edge">
-	<link rel="stylesheet" type="text/css" href="css/uikit.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+	
+	
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
 	<title> Calculator </title>
 </head>
 <body>
 	<div class="CalculatorBody">
+		<h2 style="margin-left: 62px;"> Simple Calculator </h2>
 		<table>
+			
+			
 			<tr>
-				<td><input type="text" name="" class="MyResult"></td>
+				
+				<td colspan="4"><input type="text" name="" id="MyResult"></td>
 			</tr>
+			<br>
+			<br>
 			<tr>
-				<td><input type="button" name="" value="C" onclick="DeleteMe()"></td>
-				<td><input type="text" name="" value="(" onclick="calculator()"></td>
-				<td><input type="text" name="" value=")" onclick="calculator()"></td>
-			</tr>
-
-			<tr>
-				<td><input type="button"  value="7" onclick="calculator()"></td>
-				<td><input type="text"  value="8" onclick="calculator()"></td>
-				<td><input type="text"  value="9" onclick="calculator()"></td>
-				<td><input type="text"  value="+" onclick="calculator()"></td>
-			</tr>
-
-			<tr>
-				<td><input type="button"  value="4" onclick="calculator()"></td>
-				<td><input type="text"  value="5" onclick="calculator()"></td>
-				<td><input type="text"  value="6" onclick="calculator()"></td>
-				<td><input type="text"  value="-" onclick="calculator()"></td>
+				<td><input type="button" name="" value="AC" onclick="DeleteMe()"></td>
+				<td><input type="button" name="" value="(" onclick="calculator('(')"></td>
+				<td><input type="button" name="" value=")" onclick="calculator(')')"></td>
+				<td><input type="button"  value="." onclick="calculator('.')"class="entu"></td>
 			</tr>
 
 			<tr>
-				<td><input type="button"  value="1" onclick="calculator()"></td>
-				<td><input type="text"  value="2" onclick="calculator()"></td>
-				<td><input type="text"  value="3" onclick="calculator()"></td>
-				<td><input type="text"  value="*" onclick="calculator()"></td>
+				<td><input type="button"  value="7" onclick="calculator('7')"></td>
+				<td><input type="button"  value="8" onclick="calculator('8')"></td>
+				<td><input type="button"  value="9" onclick="calculator('9')"></td>
+				<td><input type="button"  value="+" onclick="calculator('+')"class="add"></td>
 			</tr>
 
 			<tr>
-				<td><input type="button"  value="0" onclick="calculator()"></td>
-				<td><input type="text"  value="." onclick="calculator()"></td>
-				<td><input type="text"  value="/" onclick="calculator()"></td>
-				<td><input type="text"  value="=" onclick="Answer()"></td>
+				<td><input type="button"  value="4" onclick="calculator('4')"></td>
+				<td><input type="button"  value="5" onclick="calculator('5')"></td>
+				<td><input type="button"  value="6" onclick="calculator('6')"></td>
+				<td><input type="button"  value="-" onclick="calculator('-')" class="minus"></td>
+			</tr>
+
+			<tr>
+				<td><input type="button"  value="1" onclick="calculator('1')"></td>
+				<td><input type="button"  value="2" onclick="calculator('2')"></td>
+				<td><input type="button"  value="3" onclick="calculator('3')"></td>
+				<td><input type="button"  value="*" onclick="calculator('*')"class="multiple"></td>
+			</tr>
+
+			<tr>
+				<td><input type="button"  value="0" onclick="calculator('0')"></td>
+				<td><input type="button"  value="00" onclick="calculator('00')"></td>
+				<td><input type="button"  value="/" onclick="calculator('/')"class="devid"></td>
+				<td><input type="button"  value="=" onclick="Answer()"class="equal"></td>
 			</tr>
 
 		</table>
@@ -68,27 +74,22 @@
 
 
 
-	<script>
+	<!--<script>
 		function DeleteMe(){
 
 		}
-		function calculator(){
-
+		function calculator(NewValue){
+			document.getElementById("MyResult").value += NewValue;
 		}
 		function Answer(){
 
 		}
-	</script>
+	</script>-->
+	<script  src="script.js"></script>
 
 
 
 
-	<script src="js/jquery2.js"></script>
-	<script src="js/munny.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/navbar-fixed.js"></script>
-	<script src="js/uikit.min.js"></script>
-	<script src="js/uikit-icons.min.js"></script>
 </body>
 
 </html>
